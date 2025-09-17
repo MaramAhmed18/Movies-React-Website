@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Movies React Website
+[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/MaramAhmed18/Movies-React-Website)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+👉 *[Live Demo](https://movies-react-website-git-main-maramahmed18s-projects.vercel.app)*
+
+A responsive movie browsing web application built with React. Users can discover popular movies, search for specific titles, view details, and manage a personal list of favorites. The app features a theme switcher (Light/Dark) and multi-language support (English/Arabic).
+
+## Features
+
+- *Movie Browsing:* View a paginated list of popular movies from The Movie DB (TMDb) API.
+- *Search Functionality:* Search for movies by title.
+- *Movie Details:* Click on a movie to see its poster, overview, release date, and rating.
+- *Favorites System:* Add or remove movies from a persistent "Favorites" list using Redux.
+- *Theme Toggling:* Switch between a light and a dark mode, with the state managed by Redux.
+- *Localization:* Change the application's language between English (EN) and Arabic (AR) using React's Context API.
+- *User Forms:* Includes functional Registration and Login forms with real-time validation.
+
+## Tech Stack
+
+- *Frontend:* React.js
+- *State Management:* Redux & Redux Thunk
+- *Language Management:* React Context API
+- *Routing:* React Router
+- *HTTP Client:* Axios
+- *Styling:* Bootstrap, Font Awesome, Custom CSS
+- *API:* The Movie DB (TMDb)
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+You need to have Node.js and npm installed on your machine.
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/get-npm)
+
+### Installation
+
+1.  *Clone the repository:*
+    sh
+    git clone https://github.com/maramahmed18/movies-react-website.git
+    
+2.  *Navigate to the project directory:*
+    sh
+    cd movies-react-website
+    
+3.  *Install NPM packages:*
+    sh
+    npm install
+    
+    *Note: The project is configured to use --legacy-peer-deps for Vercel deployments, but npm install should work for local development.*
+
+4.  *Start the development server:*
+    sh
+    npm start
+    
+    The application will be available at http://localhost:3000.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### npm run build
 
-### `npm test`
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### npm test
 
-### `npm run build`
+Launches the test runner in the interactive watch mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project follows a standard React application structure, with logic separated by feature and concern.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+/src
+├── Context/         # React Context for language management
+├── componants/      # Reusable UI components (e.g., Card)
+├── pages/           # Page-level components for routing
+├── store/           # Redux files for state management
+│   ├── Actions/     # Redux action creators
+│   ├── Reducers/    # Redux reducers
+│   └── Store.js     # Redux store configuration
+├── App.js           # Main application component with routing
+└── index.js         # Entry point of the application
